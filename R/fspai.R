@@ -31,7 +31,7 @@ remove_v <- function(win_j, array){
 
 
 
-#' Uses dynamic algorithm to construct Vecchia approximation
+#' Uses a dynamic algorithm to construct the Vecchia approximation
 #'
 #' @param covfun The covariance function used to create covmat
 #' @param covparms The covariance parameters used to create covmat
@@ -40,7 +40,7 @@ remove_v <- function(win_j, array){
 #'  @return A list containing
 #' \itemize{
 #'   \item NNarray A matrix of indices of nonzero entries
-#'   \item B - A vector of numbers.
+#'   \item Linv - The Vecchia Approximation
 #' }
 #' @export
 FSPAI <- function(covfun, covparms,covmat, NNarray2, locs, m){
@@ -76,7 +76,7 @@ FSPAI <- function(covfun, covparms,covmat, NNarray2, locs, m){
     array <- remove_v(win_j, array)
 
     loc_sub <- locs[NNarray[i,c(2:(k+1),1)],]
-    sub_cov_all <- exponential_isotropic(covparms, loc_sub)
+    sub_cov_all <- covfun(covparms, loc_sub)
 
     S11 <- sub_cov_all[1:k,1:k]
     S12 <- sub_cov_all[(k+1),1:k]
@@ -101,7 +101,7 @@ FSPAI <- function(covfun, covparms,covmat, NNarray2, locs, m){
       array <- remove_v(win_j, array)
 
       loc_sub <- locs[NNarray[i,c(2:(k+1),1)],]
-      sub_cov_all <- exponential_isotropic(covparms, loc_sub)
+      sub_cov_all <- covfun(covparms, loc_sub)
 
       S11 <- sub_cov_all[1:k,1:k]
       S12 <- sub_cov_all[(k+1),1:k]

@@ -2,18 +2,18 @@
 % Please edit documentation in R/fspai.R
 \name{expandm}
 \alias{expandm}
-\title{does stuff}
+\title{Decompresses a sparse representation of a lower triangular matrix}
 \usage{
 expandm(Linv, NNarray)
 }
 \arguments{
-\item{Linv}{Vecchia approximation in compressed format}
+\item{Linv}{The Vecchia approximation in compressed format}
 
-\item{NNarray}{Matrix of indices of nonzero entries}
+\item{NNarray}{A matrix of indices of nonzero entries}
 }
 \value{
-Li  Vecchia approximation in non-compressed format
+Li The Vecchia approximation in non-compressed format
 }
 \description{
-does stuff
+Decompresses a sparse representation of a lower triangular matrix
 }

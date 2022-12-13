@@ -2,7 +2,7 @@
 % Please edit documentation in R/fspai.R
 \name{FSPAI}
 \alias{FSPAI}
-\title{Add together two numbers}
+\title{Uses a dynamic algorithm to construct the Vecchia approximation}
 \usage{
 FSPAI(covfun, covparms, covmat, NNarray2, locs, m)
 }
@@ -16,10 +16,10 @@ FSPAI(covfun, covparms, covmat, NNarray2, locs, m)
 \item{NNarray2}{A matrix of indices to search when doing dynamic search
  @return A list containing
 \itemize{
-  \item A - The letters of the alphabet.
-  \item B - A vector of numbers.
+  \item NNarray A matrix of indices of nonzero entries
+  \item Linv - The Vecchia Approximation
 }}
 }
 \description{
-Add together two numbers
+Uses a dynamic algorithm to construct the Vecchia approximation
 }

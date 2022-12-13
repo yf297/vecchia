@@ -1,10 +1,10 @@
 Package: vecchia
 Type: Package
-Title: vecchia approximations
+Title: Vecchia Approximation
 Version: 0.1.0
 Author: person("Youssef", "Fahmy", email = "yf297@cornell.edu", role = "aut" ) )
 Maintainer: Youssef Fahmy <yf297@cornell.edu>
-Description: vecchia approximations
+Description: Computes Vecchia approximations using  a dyanmic sparisty pattern selection
 License: GPL
 Encoding: UTF-8
 LazyData: true
