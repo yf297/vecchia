@@ -2,7 +2,7 @@
 % Please edit documentation in R/fspai.R
 \name{FSPAI}
 \alias{FSPAI}
-\title{Uses a dynamic algorithm to construct the Vecchia approximation}
+\title{Dynamic-Vecchia}
 \usage{
 FSPAI(covfun, covparms, covmat, NNarray2, locs, m)
 }
@@ -13,12 +13,14 @@ FSPAI(covfun, covparms, covmat, NNarray2, locs, m)
 
 \item{covmat}{The covariance matrix}
 
-\item{NNarray2}{A matrix of indices to search when doing dynamic search
- @return A list containing
+\item{NNarray2}{A matrix of indices to search when doing dynamic search}
+}
+\value{
+A list containing
 \itemize{
-  \item NNarray A matrix of indices of nonzero entries
-  \item Linv - The Vecchia Approximation
-}}
+  \item  A matrix of indices of nonzero entries
+  \item  The Vecchia Approximation
+}
 }
 \description{
 Uses a dynamic algorithm to construct the Vecchia approximation
