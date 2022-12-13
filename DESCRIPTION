@@ -1,0 +1,20 @@
+Package: vecchia
+Type: Package
+Title: vecchia approximations
+Version: 0.1.0
+Author: person("Youssef", "Fahmy", email = "yf297@cornell.edu", role = "aut" ) )
+Maintainer: Youssef Fahmy <yf297@cornell.edu>
+Description: vecchia approximations
+License: GPL
+Encoding: UTF-8
+LazyData: true
+Imports:
+    GpGp,
+    Matrix,
+    monomvn,
+    SparseM
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.2.3
